@@ -151,9 +151,10 @@
     margin-top: 1.5rem;
   }
 
-  .vblecolorY{
+  .vblecolorY {
     background-color: yellow;
   }
+
   .social-links path {
     transition: fill 0.3s ease;
     fill: var(--gray-400);
@@ -176,15 +177,16 @@
       margin-block: 1.5rem;
     }
   }
-  .yellow{
+
+  .yellow {
     background-color: yellow;
   }
-  
-  .blue{
-    background-color:blue;
+
+  .blue {
+    background-color: blue;
   }
-  
-  .black{
+
+  .black {
     background-color: black;
   }
 </style>
@@ -207,10 +209,34 @@
 
 
 <div [ngStyle]="{'background':colorFondo ? colorFondo :'red'}">Texto fondo rojo</div>
-<button (click)="colorFondo='blue'"[ngClass]="{'blue':colorFondo =='blue'}">Azul</button>
-<button (click)="colorFondo='yellow'"[ngClass]="{'yellow':colorFondo =='yellow'}">Amarillo</button>
-<button (click)="colorFondo='black'"[ngClass]="{'black':colorFondo =='black'}">Negro</button>
+<button (click)="colorFondo='blue'" [ngClass]="{'blue':colorFondo =='blue'}">Azul</button>
+<button (click)="colorFondo='yellow'" [ngClass]="{'yellow':colorFondo =='yellow'}">Amarillo</button>
+<button (click)="colorFondo='black'" [ngClass]="{'black':colorFondo =='black'}">Negro</button>
 
+<ul>
+  <li *ngFor="let libro of libros; first as primero">
+    id: {{libro.id}}
+    Título: {{
+    libro.titulo
+    }} Autor: {{libro.autor}}
+    <span *ngIf="primero"><b>Este libro es genial</b></span>
+  </li>
+</ul>
+<!--
+Esto es una prueba sobre el tipado de typescript, he probado a definir el array "libros" de tipo <Object> pero typescript no itera sobre él puesto que no 
+  encuentra las propiedades, para que funcione he tenido que definir el array de tipo <any>.
+    Abajo está el mismo bucle aplicado a un array de tipo <Libro> (He tenido que crear la clase a mano para que funcione)
+      -->
+<ul>
+  <li *ngFor="let libro of libros1">
+    id: {{libro.id}}
+    Título: {{
+    libro.titulo
+    }} Autor: {{libro.autor}}
+    <a href="https://www.google.com/search?q={{libro.titulo}}">Buscar</a>
+    <button (click)="showAuthor(libro)">Mostrar autor</button>
+  </li>
+</ul>
 
 <main class="main">
   <div class="content">
