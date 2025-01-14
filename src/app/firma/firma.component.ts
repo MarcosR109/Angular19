@@ -3,7 +3,7 @@ import { ColoresComponent } from '../colores/colores.component';
 
 @Component({
   selector: 'app-firma',
-  imports: [ColoresComponent],
+  imports: [],
   templateUrl: './firma.component.html',
   styleUrl: './firma.component.css',
   standalone:true
