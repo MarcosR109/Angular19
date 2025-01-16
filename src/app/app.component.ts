@@ -4,13 +4,13 @@ import { PruebasComponent } from './pruebas/pruebas.component';
 import { ColoresComponent } from './colores/colores.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CdsComponent } from './cds/cds.component';
+import { LibrosComponent } from './libros/libros.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PruebasComponent, ColoresComponent, CommonModule, FormsModule, CdsComponent, CabeceraComponent],
+  imports: [RouterOutlet, PruebasComponent, ColoresComponent, CommonModule, FormsModule, LibrosComponent, CabeceraComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true,

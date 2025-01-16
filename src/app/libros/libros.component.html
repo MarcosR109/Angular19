@@ -5,13 +5,9 @@
       Abajo está el mismo bucle aplicado a un array de tipo <Libro> (He tenido que crear la clase a mano para que funcione)
         -->
 <ul>
-  <li *ngFor="let cd of CDs">
-    <a class="link" [routerLink]="['/informacion',cd.id]">{{cd.titulo}}</a> Autor: {{cd.autor}}
-    <a class="link" href="https://www.google.com/search?q={{cd.titulo}}">Buscar</a>
-    <p *ngFor="let track of cd.canciones">
-      {{track}}
-    </p>
+  <li *ngFor="let libro of libros">
+    <a class="link" [routerLink]="['/informacion',libro.id]">{{libro.titulo}}</a> Autor: {{libro.autor}}
+    <a class="link" href="https://www.google.com/search?q={{libro.titulo}}">Buscar</a>
   </li>
-
 </ul>
 <br>
