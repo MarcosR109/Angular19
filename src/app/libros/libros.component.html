@@ -1,12 +1,14 @@
-<p>CDs works!</p>
+<p>Libros works!</p>
 <!--
   Esto es una prueba sobre el tipado de typescript, he probado a definir el array "libros" de tipo <Object> pero typescript no itera sobre él puesto que no 
     encuentra las propiedades, para que funcione he tenido que definir el array de tipo <any>.
       Abajo está el mismo bucle aplicado a un array de tipo <Libro> (He tenido que crear la clase a mano para que funcione)
         -->
 <ul>
+  Holaa
   <li *ngFor="let libro of libros">
-    <a class="link" [routerLink]="['/informacion',libro.id]">{{libro.titulo}}</a> Autor: {{libro.autor}}
+    <a (click)="agregarLibro(libro)"
+    class="link" [routerLink]="['/informacion',libro.id]">{{libro.titulo}}</a> Autor: {{libro.autor}}
     <a class="link" href="https://www.google.com/search?q={{libro.titulo}}">Buscar</a>
   </li>
 </ul>

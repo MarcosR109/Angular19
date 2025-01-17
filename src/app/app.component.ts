@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { PruebasComponent } from './pruebas/pruebas.component';
 import { ColoresComponent } from './colores/colores.component';
@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LibrosComponent } from './libros/libros.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
+import { LibroclickedService } from './libroclicked.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class AppComponent {
   /**
    *
    */
-
+  librosVistos = inject(LibroclickedService);
 
   constructor() {
 

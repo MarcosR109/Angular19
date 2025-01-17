@@ -1,5 +1,10 @@
 <link rel="stylesheet" href="https://unpkg.com/chota">
+<h2>Libros vistos:</h2>
 
-<button class="button" [routerLink]="['/']" >Ir a Inicio </button>
+<ul *ngIf="librosVistos.verListado()">
+    <li *ngFor="let libro of librosVistos.verListado()">{{libro.titulo}}</li>
+</ul>
 
-<button class="button" [routerLink]="['/cds']" >Ir a libros </button>
+<button class="button" [routerLink]="['/']">Ir a Inicio </button>
+
+<button class="button" [routerLink]="['/libros']">Ir a libros </button>
