@@ -1,0 +1,12 @@
+.miclase {
+    background-color: darkcyan;
+}
+
+div {
+    height: 500px;
+    width: auto;
+}
+
+[data-select="true"]:not(.miclase) {
+    background: #BEAAD0;
+}

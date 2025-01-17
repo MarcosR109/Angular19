@@ -5,7 +5,7 @@
       Abajo está el mismo bucle aplicado a un array de tipo <Libro> (He tenido que crear la clase a mano para que funcione)
         -->
 <ul>
-  Holaa
+  <h2>Libros:</h2>
   <li *ngFor="let libro of libros">
     <a (click)="agregarLibro(libro)"
     class="link" [routerLink]="['/informacion',libro.id]">{{libro.titulo}}</a> Autor: {{libro.autor}}

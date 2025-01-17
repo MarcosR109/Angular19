@@ -12,8 +12,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class LibrosComponent {
   libros:any;
-  LibroClicked = inject(LibroclickedService);
-  constructor(private http: HttpClient) {
+  //LibroClicked = inject(LibroclickedService);
+  constructor(private http: HttpClient,public LibroClicked:LibroclickedService) {
     /*this.libros = [
       { id: 1, titulo: 'Harry potter', autor: 'JK' },
       { id: 2, titulo: 'Harry potter 2', autor: 'JK' }, 

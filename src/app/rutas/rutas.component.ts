@@ -5,15 +5,18 @@ import { LibrosComponent } from '../libros/libros.component';
 import { CabeceraComponent } from '../cabecera/cabecera.component';
 import { InicioComponent } from '../inicio/inicio.component';
 import { InformacionComponent } from '../informacion/informacion.component';
+import { RenderejemploComponent } from '../renderejemplo/renderejemplo.component';
 export const rutas: Routes = [
-  {path: 'cabecera', component: CabeceraComponent },
-  {path:'inicio',component:InicioComponent},
-  {path:'informacion/:libroId',component:InformacionComponent},
-  {path:'libros',component:LibrosComponent},
-  {path:'',component:InicioComponent,pathMatch:'full'},
-  {path:'**',redirectTo:'/'},
+  { path: 'cabecera', component: CabeceraComponent },
+  { path: 'inicio', component: InicioComponent },
+  { path: 'informacion/:libroId', component: InformacionComponent },
+  { path: 'libros', component: LibrosComponent },
+  { path: 'renderer2', component: RenderejemploComponent },
+  { path: '', component: InicioComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: '/' },
+
 ];
 
 export class RutasComponent {
-  title:String = "Rutas";
+  title: String = "Rutas";
 }

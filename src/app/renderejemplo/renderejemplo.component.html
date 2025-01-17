@@ -1,0 +1,5 @@
+<h1>Renderer</h1>
+<ul>
+    <li *ngFor="let cd of ceD" (mousedown)="activeMethod(elementoDOM)" (mouseup)="activeMethod2(elementoDOM)"
+        #elementoDOM [attr.data-select]="elementoDOM.hasAttribute('data-select') ? 'true' : null">{{cd.titulo}}</li>
+</ul>

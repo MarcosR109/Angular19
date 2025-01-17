@@ -7,14 +7,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './informacion.component.css'
 })
 export class InformacionComponent {
-  libros: Array<Libro>;
+  libros: Array<any>;
   /**
    *
    */
   constructor(private rutaUsuario:ActivatedRoute) {
     this.libros = [
       { id: 1, titulo: 'Harry potter', autor: 'JK' },
-      { id: 2, titulo: 'Harry potter 2', autor: 'JK' }, { id: 3, titulo: 'Harry potter 3 ', autor: 'JK' }
+      { id: 2, titulo: 'Harry potter 2', autor: 'JK' }, 
+      { id: 3, titulo: 'Harry potter 3 ', autor: 'JK' }
     ]
   }
   libroId:any;
