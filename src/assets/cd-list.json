@@ -1,0 +1,11 @@
+[
+    {"id": 1, "titulo": "'Night at the opera'", "autor": "'Queen'","precio": "25€","canciones": ["'track 1","track 2"," track 3'"
+        ]
+    },
+    { "id": 2, "titulo":"'Wish you were here'", "autor": "'Pink Floyd'","precio": "5€","canciones": ["'track 1","track 2","track 3"
+        ]
+    },
+    { "id": 3, "titulo": "'El círculo'", "autor": "'Kase.O'","precio": "2000€","canciones": ["'track 1","track 2","track 3"
+        ]
+    }
+]

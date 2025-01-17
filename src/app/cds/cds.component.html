@@ -4,14 +4,23 @@
     encuentra las propiedades, para que funcione he tenido que definir el array de tipo <any>.
       Abajo está el mismo bucle aplicado a un array de tipo <Libro> (He tenido que crear la clase a mano para que funcione)
         -->
+<style>
+  mat-spinner {
+    display: block;
+    margin: 0 auto;
+  }
+</style>
+
+<mat-spinner *ngIf="isLoading" [diameter]="50"></mat-spinner>
+<p *ngIf="isLoading">Cargando...</p>
 <ul>
   <li *ngFor="let cd of CDs">
-    <a class="link" [routerLink]="['/informacion',cd.id]">{{cd.titulo}}</a> Autor: {{cd.autor}}
+    <a class="link" (click)="agregarCD(cd)" [routerLink]="['/informacion',cd.id]">{{cd.titulo}}</a> Autor: {{cd.autor}}
     <a class="link" href="https://www.google.com/search?q={{cd.titulo}}">Buscar</a>
     <p *ngFor="let track of cd.canciones">
       {{track}}
     </p>
   </li>
-
 </ul>
+<p *ngIf="errorHttp">Ha ocurrido un error con la carga...</p>
 <br>

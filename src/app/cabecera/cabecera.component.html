@@ -3,3 +3,8 @@
 <button class="button" [routerLink]="['/']" >Ir a Inicio </button>
 
 <button class="button" [routerLink]="['/cds']" >Ir a CDs </button>
+<h1>Lista de cds clicados:
+    <ul>
+        <li *ngFor="let cd of lista.verListado()">{{cd.id}}, {{cd.titulo}}</li>
+    </ul>
+</h1>
